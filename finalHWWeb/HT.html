@@ -1,0 +1,113 @@
+<html>
+    <head> <title> About me </title> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    
+<script src="https://code.jquery.com/jquery-git.js"></script>
+<link rel="icon" type="image/x-icon" href="logo.jpg">
+        <div class="scrollmenu">
+            <a href="main.html">Main</a></a>
+            <a href="ElfBar.html">Only for Adults</a>
+            <a href="HT.html"> About me </a>
+            <a href="SomeStuff.html">Just some  Stuff</a>
+          </div>
+          <style >
+        h4{margin: 4px;}
+        .Second{ font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif; color:darkblue }
+        .result{ font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif; color:darkblue }
+           body, html { 
+            height: auto;
+            padding: 10px;
+            background-image:url("bg.png");
+            height: 100%;
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;}
+       div.scrollmenu {
+        border-radius:12px;
+        margin: 2px;
+        background-color: #333;
+        overflow: auto;
+        white-space: nowrap;}
+      div.scrollmenu a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        text-decoration: none;}
+      div.scrollmenu a:hover {background-color: #777;}      
+       </style>
+    </head>
+    <body>
+      <br>
+      <div style="margin: 4px;" class="container">
+        <div id="Second"> <h3> 
+         Hello again !
+           Glad to see you here !
+           So, my name is Vlad , I'm from Stepnogorsk .
+           Now I'm a student of Astana IT University .
+           I'm a winner of city olimpic of programming , also a winner of region olympic of robotics .
+           I have had a buisness in my town, was selling some things, now I don't do anything with it .
+           In my town I was like a master of 3D printers , I was fixing and printing some details and figures in schools !
+           I started learning English when I was 11 and I started learning programming when I was 15 .
+           Who I want to be in future ?
+           I guess that I want to be a programmer in a big company , for that I do my best now .
+           My lovely pets are Geckos, I had Eublepharis .
+        </h3>
+        </div>
+<br> 
+        <h4> Number of words = </h4> 
+        <p id="result" style="margin: 4px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: medium;" >  </p> 
+        <script>
+        window.onload = function() {
+            var result = 0;
+            check = (word) => {
+            if (word.length > 8) {
+                word = '<span style="background:yellow;">' + word + '</span>';
+              } else if( word == '.' ){ word = '<span>'+word+'<br\>'+'</span>' }
+              else if(word.length > 1) { result = result + 1; }
+              else if(word == '?') { word = '<span>'+'🤔'+'</span>'+'<br\>' }
+              else if(word == '!') { word = '<span>'+'😲'+'</span>'+'<br\>' }
+              else { word; } return word;
+            }             
+            var str = document.querySelector("#Second").innerText;
+            var newt = str.trim().split(' ').map(check).join('   ');
+            newt = '<span style=" font-size: large; font-family: Verdana, Geneva, Tahoma, sans-serif;">'+newt+'</span>';
+            document.querySelector("#Second").innerHTML = newt;
+            document.getElementById("result").innerHTML = result;
+          } 
+        </script>   
+        <br> <br>
+        <style>
+            #div1 {
+              font-size:48px; 
+            }
+            </style>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <body>
+            <div class="container">
+            <div id="div1" class="fa"></div>
+            </div>
+          </div>
+            <script>
+            function hand() {
+              var a;
+              a = document.getElementById("div1");
+              a.innerHTML = "&#xf25a;";
+              setTimeout(function () {
+                  a.innerHTML = "&#xf256;";
+                }, 500);
+              setTimeout(function () {
+                  a.innerHTML = "&#xf259;";
+                }, 1000);
+              setTimeout(function () {
+                  a.innerHTML = "&#xf256;";
+                }, 1500);
+            }
+            hand();
+            setInterval(hand, 2000);
+            </script>
+            <br><br><br>   
+    </body>
+</html>
